@@ -49,7 +49,7 @@ class BundlePass : Fragment() {
             bundle.putString("nama", field_bundle_nama.text.toString())
             bundle.putString("umur", field_bundle_umur.text.toString())
 
-            val intent = Intent(this, BundleSecondActivity::class.java)
+            val intent = Intent(view.context, BundleSecondActivity::class.java)
             intent.putExtras(bundle)
             startActivity(intent)
         }
