@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/data_pass"
+        android:title="Data Pass"
+        android:icon="@drawable/ic_baseline_data_24"/>
+
+    <item
+        android:id="@+id/call"
+        android:title="Call"
+        android:icon="@drawable/ic_baseline_local_phone_24"/>
+
+    <item
+        android:id="@+id/whatsapp"
+        android:title="Whatsapp"
+        android:icon="@drawable/ic_baseline_chat_24" />
+</menu>

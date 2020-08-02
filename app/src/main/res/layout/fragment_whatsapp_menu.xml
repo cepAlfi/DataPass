@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".WhatsappMenu">
+
+    <EditText
+        android:id="@+id/field_whatsapp_nomor_telp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/box_input_field"
+        android:hint="contoh: 081xxxxxxxxx"
+        android:inputType="number"
+        android:paddingHorizontal="16dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nama_text" />
+
+
+    <TextView
+        android:id="@+id/nama_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Nomor telepon"
+        android:textColor="@android:color/primary_text_light_nodisable"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/umur_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:text="Pesan"
+        android:textColor="@android:color/primary_text_light_nodisable"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/field_whatsapp_nomor_telp" />
+
+    <EditText
+        android:id="@+id/field_whatsapp_pesan"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/box_input_field"
+        android:hint="contoh: Hai, salam kenal! "
+        android:isScrollContainer="true"
+        android:singleLine="false"
+        android:maxLines="5"
+        android:gravity="top"
+        android:inputType="textCapSentences|textMultiLine"
+        android:padding="16dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/umur_text" />
+
+    <Button
+        android:id="@+id/submit_whatsapp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/button_style"
+        android:layout_marginTop="32dp"
+        android:padding="8dp"
+        android:text="Kirim via Whatsapp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        style="?android:attr/borderlessButtonStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/field_whatsapp_pesan" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
