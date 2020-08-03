@@ -3,6 +3,7 @@ package com.example.datapass
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_bundle_second.*
 
 class BundleSecondActivity : AppCompatActivity() {
@@ -11,10 +12,17 @@ class BundleSecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bundle_second)
 
+        supportActionBar?.hide()
+
+        Glide.with(this)
+            .load(R.drawable.img)
+            .into(bg)
+
         if (intent.extras != null) {
             val bundle = intent.extras
-            nama_bundle_second.setText("Nama anda adalah ${bundle?.getString("nama")}")
-            umur_bundle_second.setText("Umur anda sekarang adalah ${bundle?.getString("umur")} Tahun")
+            nama_bundle_second.setText("""Hi, 
+                |${bundle?.getString("nama")}""".trimMargin())
+            umur_bundle_second.setText("Semoga kamu sehat selalu di umur yang ke-${bundle?.getString("umur")} Tahun")
         }else {
             nama_bundle_second.setText("Anda tidak mengisi nama")
             umur_bundle_second.setText("Anda tidak mengisi umur")
